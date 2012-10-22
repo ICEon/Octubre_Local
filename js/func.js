@@ -18,11 +18,20 @@ $(document).ready(function(e) {
 	 
 }*/
 
+
+
 $('#alert  input [type=range]').swiperight(function(){
 	alert ('deslizo a la derecha');
 });
 
 	 	});
+		
+document.addEventListener('touchstart', function(event) {
+
+    alert(event.touches.length);
+
+}, false);
+
 document.addEventListener("deviceready",function(){
 //	 navigator.notification.beep();
     $('.btn').tap(function(){	
