@@ -36,7 +36,8 @@ $('#alert  input [type=range]').swiperight(function(){
 
 document.addEventListener("deviceready",function(){
 //	 navigator.notification.beep();
-     $('.btn').bind('tap',function(event){	
+$(function() {
+	$('.btn').bind('tap',function(event){	
      var boton = (($(this).attr('class')).split(' '))[1];
 	 alert (boton);
      switch (boton){
@@ -81,5 +82,7 @@ $('#alert').swipeleft(function(){
 });
 
 	},fasle);
+});
+     
 });	
 
