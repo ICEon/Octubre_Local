@@ -34,6 +34,7 @@ $('.btn').bind('tap',function(event) {
 
 $('#confirm').swipeleft(function(){
 	navigator.notification.confirm("¿Que desea hacer?",	function(boton){
+		alert (boton);
 		switch (boton)
 		{
 		case '0':
