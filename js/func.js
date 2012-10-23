@@ -34,13 +34,13 @@ $('.btn').bind('tap',function(event) {
 
 $('#confirm').swipeleft(function(){
 	navigator.notification.confirm("¿Que desea hacer?",	function(boton){
-		alert (boton);
+//		alert (boton);
 		switch (boton)
 		{
-		case '0':
+		case 1:
 			  navigator.notification.beep(1);
 		break;
-		case '1':
+		case 2:
 			  navigator.notification.vibrate(500);
 		break;
 		}
