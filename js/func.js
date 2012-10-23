@@ -25,6 +25,26 @@ $('.btn').bind('tap',function(event) {
 	 break;
 	 
 	 }
+	 
+	 $('#alert').swiperight(function(){
+	navigator.notification.alert("deslizó a la derecha", function (){}, "Practica 1", "Aceptar");
+	
+});
+
+
+$('#alert').swipeleft(function(){
+	navigator.notification.confirm("¿Que desea hacer?",	function(boton){
+		switch (boton)
+		{
+		case '0':
+			  navigator.notification.beep(1);
+		break;
+		case '1':
+			  navigator.notification.vibrate(500);
+		break;
+		}
+		}, "Practica 1", "Beep, Vibrar, Cancelar");
+});
 
     });
 
