@@ -32,7 +32,7 @@ $('.btn').bind('tap',function(event) {
 });
 
 
-$('#alert').swipeleft(function(){
+$('#confirm').swipeleft(function(){
 	navigator.notification.confirm("¿Que desea hacer?",	function(boton){
 		switch (boton)
 		{
