@@ -1,5 +1,7 @@
 // JavaScript Document
 //deviceready espera a que el deispositivo este listo
+
+
 $(document).ready(function(e) {
    /* $('.btn').tap(function(){	
      var boton = (($(this).attr('class')).split(' '))[1];
@@ -26,16 +28,17 @@ $('#alert  input [type=range]').swiperight(function(){
 
 	 	});
 		
-document.addEventListener('touchstart', function(event) {
+/*document.addEventListener('touchstart', function(event) {
 
     alert(event.touches.length);
 
-}, false);
+}, false);*/
 
 document.addEventListener("deviceready",function(){
 //	 navigator.notification.beep();
-    $('.btn').tap(function(){	
+     $('.btn').bind('tap',function(event){	
      var boton = (($(this).attr('class')).split(' '))[1];
+	 alert (boton);
      switch (boton){
      
 	 case 'b1':
