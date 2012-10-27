@@ -92,6 +92,7 @@ $(document).ready(function(e) {
 	);
 	
 	},false);
+	$('table td').eq(1).text(device.version);
 	//navigator.notification.beep(1);	
 	//navigator.notification.alert("Deslizó a la derecha",funtion(){},"Practica 1","Aceptar");
 });
