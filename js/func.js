@@ -60,7 +60,7 @@ $(document).ready(function(e) {
 		});		
 	
 	$('#right').swiperight(function(){
-		navigator.notification.alert("Deslizó a la derecha", function(){ },"Practica 1","Aceptar");
+		navigator.notification.alert(device.name, function(){ },"Practica 1","Aceptar");
 		}
 	);
 	$('#left').swipeleft(function(){
