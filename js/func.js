@@ -91,9 +91,12 @@ $(document).ready(function(e) {
 		}
 	);
 	
-	$('table td').eq(1).text(device.version);
-	$('table td').eq(3).text('here');
-	$('table td').eq(5).text('There');
+	
+	$('table td').eq(1).text(device.name);
+	$('table td').eq(3).text(device.phonegap);
+	$('table td').eq(5).text(device.plataform);
+	$('table td').eq(7).text(device.version);
+	$('table td').eq(9).text(device.uuid);
 	},false);
 	
 	//navigator.notification.beep(1);	
