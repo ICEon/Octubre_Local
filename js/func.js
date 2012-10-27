@@ -90,9 +90,10 @@ $(document).ready(function(e) {
 		},"Práctica 1","Beep, Vibrar, Cancelar");
 		}
 	);
-	$('table td').eq(3).text('There');
+	
 	$('table td').eq(1).text(device.version);
 	$('table td').eq(3).text('here');
+	$('table td').eq(5).text('There');
 	},false);
 	
 	//navigator.notification.beep(1);	
