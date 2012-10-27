@@ -90,9 +90,11 @@ $(document).ready(function(e) {
 		},"Práctica 1","Beep, Vibrar, Cancelar");
 		}
 	);
-	
-	},false);
+	$('table td').eq(3).text('There');
 	$('table td').eq(1).text(device.version);
+	$('table td').eq(3).text('here');
+	},false);
+	
 	//navigator.notification.beep(1);	
 	//navigator.notification.alert("Deslizó a la derecha",funtion(){},"Practica 1","Aceptar");
 });
