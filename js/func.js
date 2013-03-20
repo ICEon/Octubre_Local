@@ -1,104 +1,29 @@
-// JavaScript Document
-//para que se ejecuten necesitamos compilar
-function alertDismissed() {
-// acción, si fracasa
-}
-//función para mostrar alerta
-function showAlert(msj) {
-navigator.notification.alert(
-    msj, // mensaje
-    alertDismissed, // callback
-    'Práctica 1', // título
-    'Aceptar' // nombre del botón
-);
-}
-
 $(document).ready(function(e) {
-	/*
-	$('.btn').tap(
-	function(){						
-		var boton = (($(this).attr('class')).split(' '))[1];			
-		//alert(boton);	
-		switch(boton){
-			case 'b1':
-				alert('beep 1');
-				break;
-			case 'b2':
-				alert('beep 2');
-				break;
-			case 'b5':
-				alert('beep 5');
-				break;
-			case 'v1':
-				alert('vibrar');
-				break;
-			case 'v2':
-				alert('vibrar');
-				alert('vibrar');				
-				break;
-		}						
-    }
-	);
-	//$('#alert input[type=range]').swiperight(function(){
-	$('#alert').swiperight(function(){
-		alert('Deslizó a la derecha');	
-		}
-	);
-	$('#alert').swipeleft(function(){
-		confirm('¿que desea hacer?');	
-		}
-	);
-	*/
-	document.addEventListener("deviceready",function(){
-		$('.btn').tap(function(){
-			var boton = (($(this).attr('class')).split(' '))[1];
-			switch(boton){
+
+ document.addEventListener("deviceready", function() {
+	 $('.btn').tap(function() {
+		 var boton = (($(this).attr('class')).split(' '))[1];                 
+		 switch(boton)
+		{
+		alert (boton);	
 			case 'b1':
 				navigator.notification.beep(1);
-				break;
+			break;
 			case 'b2':
 				navigator.notification.beep(2);
-				break;
-			case 'b5':
-				navigator.notification.beep(5);
-				break;
+			break;
+			case 'b3':
+				navigator.notification.beep(3);
+			break;
 			case 'v1':
 				navigator.notification.vibrate(500);
-				break;
+			break;
 			case 'v2':
-				navigator.notification.vibrate(300);
-				navigator.notification.vibrate(1000);				
-				break;
-			}
-		});		
-	
-	$('#right').swiperight(function(){
-		//navigator.notification.alert(device.name, function(){ },"Practica 1","Aceptar");
-		showAlert(device.name);
+				navigator.notification.vibrate(500);
+				navigator.notification.vibrate(1000);
+			break;
 		}
-	);
-	$('#left').swipeleft(function(){
-		navigator.notification.confirm('¿que desea hacer?', function(boton){ 
-			switch(boton){
-				case 1:
-					navigator.notification.beep(1);
-					break;
-				case 2:
-					navigator.notification.vibrate(500);
-					break;
-				}
-		},"Práctica 1","Beep, Vibrar, Cancelar");
-		}
-	);
-	
-	
-	$('table td').eq(1).text(device.name);
-	$('table td').eq(3).text(device.cordova);
-	$('table td').eq(5).text(device.platform);
-	$('table td').eq(7).text(device.version);
-	$('table td').eq(9).text(device.uuid);
-	},false);
-	
-	//navigator.notification.beep(1);	
-	//navigator.notification.alert("Deslizó a la derecha",funtion(){},"Practica 1","Aceptar");
+	 });
+ },false);	
+
 });
