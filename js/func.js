@@ -1,3 +1,16 @@
+function alertDismissed() {
+// acción, si fracasa
+}
+//función para mostrar alerta
+function showAlert(msj) {
+navigator.notification.alert(
+    msj, // mensaje
+    alertDismissed, // callback
+    'Práctica 1', // título
+    'Aceptar' // nombre del botón
+);
+}
+
 $(document).ready(function(e) {
 
 	document.addEventListener("deviceready",function(){
